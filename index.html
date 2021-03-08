@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Currency section start -->
+    <section class="currency">
+        <div class="container">
+            <div class="currency__item">
+                <div class="currency__heading">
+                    <h2 class="currency__title">Currency Converter</h2>
+                </div>
+                <div class="currency__content">
+                    <div class="input-group">
+                        <select name="base" id="base">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="INR">INR</option>
+                        </select>
+                        <input type="number" name="amount" id="amount" value="1">
+                        <input type="submit" class="btn btn-link" id="submit" value="Convert">
+                    </div>
+                    <h2 class="currency__display">1 USD = 84.83 BDT</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Currency section end -->
+    
+    <script src="app.js"></script>
+</body>
+</html>
