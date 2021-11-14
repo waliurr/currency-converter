@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------------------------
+Theme Name: Currency Converter
+Author: waliur
+URI: contact url
+version: 1.0.0
+------------------------------------------------------------------------------------*/
+
+//font family
+//font family
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+$poppinsFontFamily: 'Poppins', sans-serif;
+
+$bodyFontFamily: $poppinsFontFamily;
+
+//variables
+//solid color
+$white: #fff;
+$black: #000;
+$green: #00BE4C;
+$red: #ff0000;
+$blue: #0000ff;
+
+//body color
+$bodyColor: #2c3e50;
+
+//theme color
+$themeColor: #2980b9;
+$titleColor: #6c5ce7;
+$subtitleColor: #187e69;
+$textColor: #32325d;
+
+//background color
+$bgSection: #dfe6e9;
+$borderColor: #ddd;
+
+//mixin
+@mixin breakpoint($width) {
+    @media screen and (max-width: $width) { 
+        @content;
+    }
+}
+
+//body style
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+body{
+    font-family: $bodyFontFamily;
+    font-size: 14px;
+    color: $white;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+//currency section style
+.currency{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #fd8d4c, #ff5264);
+    .container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.currency__item{
+    width: 400px;
+    text-align: center;
+    @include breakpoint(480px){
+        width: 100%;
+        margin: 0 10px;
+    }
+}
+
+.currency__heading{
+    margin-bottom: 20px;
+    h2{
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 700;
+        color: $white;
+        @include breakpoint(480px){
+            font-size: 20px;
+        }
+    }
+}
+
+.input__group{
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    @include breakpoint(480px){
+       display: flex;
+       flex-direction: column;
+    }
+    select,
+    input{
+        background-color: transparent;
+        border: 1px solid $borderColor;
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 500;
+        color: $white;
+        @include breakpoint(480px){
+            font-size: 16px;
+        }
+    }
+    input:focus,
+    input:focus-visible{
+        border: 1px solid $themeColor;
+        box-shadow: none;
+    }
+}
+
+.btn-convert{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border: 0;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: #6d74df;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: $white;
+    @include breakpoint(480px){
+        font-size: 14px;
+    }
+}
+
+.currency__display{
+    margin-top: 20px;
+    border: 1px solid #bebecc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: $white;
+    @include breakpoint(480px){
+        font-size: 16px;
+    }
+}

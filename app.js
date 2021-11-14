@@ -5,9 +5,9 @@ function $(selector){
 }
 
 let exchange = {
-    USD: 84.83,
-    EUR: 100.78,
-    INR: 1.16
+    USD: 85.79,
+    EUR: 98.24,
+    INR: 1.15
 };
 
 let btnSubmit = $('#submit');

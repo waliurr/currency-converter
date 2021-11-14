@@ -7,6 +7,7 @@
     <title>Currency Converter</title>
     
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     
@@ -18,16 +19,18 @@
                     <h2 class="currency__title">Currency Converter</h2>
                 </div>
                 <div class="currency__content">
-                    <div class="input-group">
+                    <div class="input__group">
                         <select name="base" id="base">
                             <option value="USD">USD</option>
                             <option value="EUR">EUR</option>
                             <option value="INR">INR</option>
                         </select>
                         <input type="number" name="amount" id="amount" value="1">
-                        <input type="submit" class="btn btn-link" id="submit" value="Convert">
+                        <a href="#" class="btn-convert" id="submit">Convert</a>
                     </div>
-                    <h2 class="currency__display">1 USD = 84.83 BDT</h2>
+                    <h2 class="currency__display">
+                        1 USD = 84.83 BDT
+                    </h2>
                 </div>
             </div>
         </div>
